@@ -6,6 +6,8 @@ import org.smart4j.chapter1.helper.DatabaseHelper;
 import org.smart4j.chapter1.model.Customer;
 
 /**
+ * help Controller and Database with service layout
+ *
  * 提供客户数据服务
  */
 public class CustomerService {

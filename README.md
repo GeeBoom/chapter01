@@ -121,5 +121,10 @@ git push origin master
 ```
 
 
+### 关系型数据库 MariaDB | MySQL
+- 一对一
+- 一对多
+- 多对多
+
 
 
