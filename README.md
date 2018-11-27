@@ -2,6 +2,30 @@
 
 ### 
 
+> git fock 多人协同开发
+
+1、添加原作者的远程仓库连接
+
+git remote add upstream https://github.com/GoogleChrome/lighthouse.git
+
+1）从原仓库获取最新版本到本地
+
+git fetch upstream master
+
+（2）保证当前位于 master 分支上
+
+git checkout master
+
+（3）将最新版本整合到本地 master 分支上
+
+git merge upstream/master
+
+（4）将更新发送到自己的 GitHub 仓库里
+
+git push origin master
+
+>>
+
 #### 需求
 
 >模块> 客户管理
