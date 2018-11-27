@@ -1,10 +1,23 @@
 package org.smart4j.chapter1.controller;
 
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import java.io.IOException;
+
 /**
  * 删除客户
- * @author TommyYear
- * @date 2018/11/26
- * @time 3:54 PM
  */
-public class CustomerDeleteServlet {
+@WebServlet("/customer_delete")
+public class CustomerDeleteServlet extends HttpServlet {
+
+    /**
+     * 处理 删除客户 请求
+     */
+    @Override
+    protected void doDelete(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+        // TODO
+    }
 }
