@@ -127,4 +127,23 @@ git push origin master
 - 多对多
 
 
+### How to use MariaDB
+
+>CREATE  DATABASE chapter01;
+
+>USE chapter01;
+
+>CREATE TABLE `customer`(
+  `id` bigint(20) not null AUTO_INCREMENT,
+  `name` varchar(255) default null,
+  `contact` varchar(255) default null,
+  `telephone` varchar(255) default null,
+  `email` varchar(255) default null,
+  `remark` text,
+  primary key (`id`)
+)
+
+
+
+
 
