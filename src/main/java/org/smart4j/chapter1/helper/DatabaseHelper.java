@@ -137,7 +137,7 @@ public final class DatabaseHelper {
             return false;
         }
 
-        String sql = "INSERT INTO " + getTableName(entityClass);
+        String sql = "INSERT INTO " + "customer";
         StringBuilder columns = new StringBuilder("(");
         StringBuilder values = new StringBuilder("(");
         for (String fieldName : fieldMap.keySet()) {
@@ -156,13 +156,13 @@ public final class DatabaseHelper {
     /**
      * 更新实体
      */
-    public static <T> boolean updateEntity(Class<T> entityClass, long id, Map<String, Object> fieldMap) {
+    public static <T> boolean updateEntity(Class<T> entityClass, int id, Map<String, Object> fieldMap) {
         if (CollectionUtil.isEmpty(fieldMap)) {
             LOGGER.error("can not update entity: fieldMap is empty");
             return false;
         }
 
-        String sql = "UPDATE " + getTableName(entityClass) + " SET ";
+        String sql = "UPDATE " + "customer" + " SET ";
         StringBuilder columns = new StringBuilder();
         for (String fieldName : fieldMap.keySet()) {
             columns.append(fieldName).append(" = ?, ");
@@ -180,8 +180,8 @@ public final class DatabaseHelper {
     /**
      * 删除实体
      */
-    public static <T> boolean deleteEntity(Class<T> entityClass, long id) {
-        String sql = "DELETE FROM " + getTableName(entityClass) + " WHERE id = ?";
+    public static <T> boolean deleteEntity(Class<T> entityClass, int id) {
+        String sql = "DELETE FROM " + "customer"+ " WHERE id = ?";
         return executeUpdate(sql, id) == 1;
     }
 

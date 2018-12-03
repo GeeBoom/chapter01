@@ -23,7 +23,7 @@ public class CustomerService {
     /**
      * 获取客户
      */
-    public Customer getCustomer(long id) {
+    public Customer getCustomer(int id) {
         String sql = "SELECT * FROM customer WHERE id = ?";
         return DatabaseHelper.queryEntity(Customer.class, sql, id);
     }
@@ -38,14 +38,14 @@ public class CustomerService {
     /**
      * 更新客户
      */
-    public boolean updateCustomer(long id, Map<String, Object> fieldMap) {
+    public boolean updateCustomer(int id, Map<String, Object> fieldMap) {
         return DatabaseHelper.updateEntity(Customer.class, id, fieldMap);
     }
 
     /**
      * 删除客户
      */
-    public boolean deleteCustomer(long id) {
+    public boolean deleteCustomer(int id) {
         return DatabaseHelper.deleteEntity(Customer.class, id);
     }
 }
